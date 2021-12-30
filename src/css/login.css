@@ -1,0 +1,132 @@
+#center-div{
+    position: absolute;
+    top: 56px;
+    bottom: 0;
+    width: 100%; 
+}
+
+#child-box-loading{
+    width: 500px;
+    height: 300px;
+
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+}
+
+#login-parent-box{
+    width: 400px;
+    height: 315px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    
+    border-style: solid;
+    border-width: 3px;
+    border-color: #ffde22;
+    background-color: #1f1d1f;
+}
+
+#login-box{
+    width: 350px;
+    height: 285px;
+
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+}
+
+#pass{
+    width:350px;
+}
+
+#user{
+    width:350px;
+}
+
+#login-text{
+    text-align: center;
+    color: #ffde22;
+}
+
+#bg-img{
+    width: 100%;
+    height: 100%;
+    display: block; 
+
+    filter: blur(1px);
+    -webkit-filter: blur(1px);
+}
+
+#login-btn{
+    float: left;
+    height: 40px;
+    margin-left: 1px;
+    margin-top: 1px;
+    margin-bottom: 3px;
+}
+
+.btn:not(:disabled):not(.disabled){
+    color: #333233;
+    background-color: #ffde22 !important;
+}
+
+#login_error{
+    font-size: 10pt;
+    color: red;
+    font-family: sans-serif;
+    margin-left: 10px; 
+    margin-bottom: 0px;
+
+    float: left;
+    margin-left: 3px; 
+}
+
+.sameline{
+    margin-top: 15px;
+    margin-bottom: -5px;
+
+    white-space: nowrap;
+    overflow-x: auto;
+    max-height: 50px;
+}
+
+#forgotPwd{
+    float: left;
+    margin-left: -10px;
+    font-size: 12px;
+    color: #ffde22;
+    background-color: rgba(0,0,0,0) !important;
+    border-color: rgba(0,0,0,0) !important;
+    cursor: pointer;
+}
+
+#pwdResetError{
+    font-size: 10pt;
+    font-family: sans-serif;
+    margin-left: 10px; 
+    margin-bottom: 0px;
+
+    margin-left: 3px; 
+}
+
+Label{
+    color: #ffde22;
+    margin-bottom: 0px;
+}
+
+.form-control{
+    background-color: #f1eaea;
+    border-style: solid;
+    border-color: #ffde22;
+}
+

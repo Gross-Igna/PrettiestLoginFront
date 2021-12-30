@@ -1,0 +1,20 @@
+.navbar-bg{
+    background-color: #1f1d1f;
+  }
+
+#user{
+    font-style: italic;
+}
+
+.navbar-brand{
+  color: #ffde22 !important;
+  margin-bottom: 3.3px !important;
+}
+
+.nav-link{
+  color: rgba(255,222,34,0.8) !important;
+}
+
+.navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
+  color: rgba(255,222,34,1) !important;
+}
