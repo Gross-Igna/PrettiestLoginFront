@@ -11,7 +11,7 @@ export const jwtValidate = async({setAuth}) => {
     const jsonData = {"username": username, "jwt": jwt};
 
     //REQUEST JWT VALIDATION
-    const response = await axios.post('http://localhost:8080/validate', jsonData);
+    const response = await axios.post('https://prettiest-login-back.herokuapp.com/validate', jsonData);
     const result = await response.data;
 
     //UPDATE AUTH STATE
@@ -40,7 +40,7 @@ export const Login = async(username, password) => {
         if((username.length > 3) && (password.length > 5)){
             try {
                     //POST REQUEST
-                    const response = await axios.post('http://localhost:8080/login', {"username": username,
+                    const response = await axios.post('https://prettiest-login-back.herokuapp.com/login', {"username": username,
                     "password": password});
                     //SAVE JWT IN LOCALSTORAGE
                     console.log("SUCCESFUL LOGIN!")
@@ -115,12 +115,12 @@ export const Register = async(fname, lname, username, password,
     }
 
     async function check_availability(){
-        const res = await axios.put('http://localhost:8080/register', {"user": username, "email": email});
+        const res = await axios.put('https://prettiest-login-back.herokuapp.com/register', {"user": username, "email": email});
         return await res.data;
     }
 
     async function database_register(){
-        axios.post('http://localhost:8080/register', 
+        axios.post('https://prettiest-login-back.herokuapp.com/register', 
         {
             "user": username,
             "firstname": fname,
@@ -173,7 +173,7 @@ export const Register = async(fname, lname, username, password,
 }
 
 export const accountActivate = async({token}, setTitle, setText, setPopup) => {
-    const res = await axios.get('http://localhost:8080/confirm-account?token='+ token);
+    const res = await axios.get('https://prettiest-login-back.herokuapp.com/confirm-account?token='+ token);
     
     if(res.data === false){
         setPopup(true);
@@ -188,7 +188,7 @@ export const accountActivate = async({token}, setTitle, setText, setPopup) => {
 export const pwdReset = async(email) => {
 
     setCursor("wait", "btn-register-success");
-    const res = await axios.get('http://localhost:8080/request-pwd-reset?email='+ email);
+    const res = await axios.get('https://prettiest-login-back.herokuapp.com/request-pwd-reset?email='+ email);
     const error_container = document.getElementById("pwdResetError");
     
 
@@ -222,7 +222,7 @@ export const requestPwdReset = async(pass, c_pass, token) => {
     }else{
         setCursor("wait", "btn-register-success")
         document.getElementById("btn-register-success").disabled = true;
-        const url = ("http://localhost:8080/reset-password?pwd="+pass+"&token="+token); 
+        const url = ("https://prettiest-login-back.herokuapp.com/reset-password?pwd="+pass+"&token="+token); 
         const res = await axios.put(url);
 
         if (res.data === true){
